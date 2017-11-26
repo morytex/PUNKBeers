@@ -12,16 +12,20 @@
 		AC141B8C1FCB3798000E8307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC141B8A1FCB3798000E8307 /* Main.storyboard */; };
 		AC141B8E1FCB3798000E8307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC141B8D1FCB3798000E8307 /* Assets.xcassets */; };
 		AC141B911FCB3798000E8307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC141B8F1FCB3798000E8307 /* LaunchScreen.storyboard */; };
+		AC141B991FCB3953000E8307 /* BeersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141B981FCB3953000E8307 /* BeersTableViewController.swift */; };
+		AC141B9B1FCB3B19000E8307 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141B9A1FCB3B19000E8307 /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC141B831FCB3798000E8307 /* RM39917.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM39917.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC141B831FCB3798000E8307 /* PUNKBeers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PUNKBeers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC141B861FCB3798000E8307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC141B881FCB3798000E8307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC141B8B1FCB3798000E8307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC141B8D1FCB3798000E8307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC141B901FCB3798000E8307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC141B921FCB3798000E8307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC141B981FCB3953000E8307 /* BeersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersTableViewController.swift; sourceTree = "<group>"; };
+		AC141B9A1FCB3B19000E8307 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,7 @@
 		AC141B841FCB3798000E8307 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC141B831FCB3798000E8307 /* RM39917.app */,
+				AC141B831FCB3798000E8307 /* PUNKBeers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +64,8 @@
 				AC141B8D1FCB3798000E8307 /* Assets.xcassets */,
 				AC141B8F1FCB3798000E8307 /* LaunchScreen.storyboard */,
 				AC141B921FCB3798000E8307 /* Info.plist */,
+				AC141B981FCB3953000E8307 /* BeersTableViewController.swift */,
+				AC141B9A1FCB3B19000E8307 /* Beer.swift */,
 			);
 			path = RM39917;
 			sourceTree = "<group>";
@@ -81,7 +87,7 @@
 			);
 			name = RM39917;
 			productName = RM39917;
-			productReference = AC141B831FCB3798000E8307 /* RM39917.app */;
+			productReference = AC141B831FCB3798000E8307 /* PUNKBeers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC141B891FCB3798000E8307 /* ViewController.swift in Sources */,
+				AC141B991FCB3953000E8307 /* BeersTableViewController.swift in Sources */,
 				AC141B871FCB3798000E8307 /* AppDelegate.swift in Sources */,
+				AC141B9B1FCB3B19000E8307 /* Beer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +286,7 @@
 				INFOPLIST_FILE = RM39917/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.RM39917;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PUNKBeers;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,7 +300,7 @@
 				INFOPLIST_FILE = RM39917/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.RM39917;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PUNKBeers;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
