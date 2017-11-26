@@ -16,6 +16,7 @@
 		AC141B9B1FCB3B19000E8307 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141B9A1FCB3B19000E8307 /* Beer.swift */; };
 		AC141B9D1FCB4066000E8307 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141B9C1FCB4066000E8307 /* REST.swift */; };
 		AC141B9F1FCB475F000E8307 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141B9E1FCB475F000E8307 /* BeerTableViewCell.swift */; };
+		AC141BA31FCB5D20000E8307 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC141BA21FCB5D20000E8307 /* BeerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AC141B9A1FCB3B19000E8307 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		AC141B9C1FCB4066000E8307 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		AC141B9E1FCB475F000E8307 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
+		AC141BA21FCB5D20000E8307 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		AC141BA11FCB47C5000E8307 /* Beer */ = {
 			isa = PBXGroup;
 			children = (
+				AC141BA21FCB5D20000E8307 /* BeerViewController.swift */,
 				AC141B981FCB3953000E8307 /* BeersTableViewController.swift */,
 				AC141B9A1FCB3B19000E8307 /* Beer.swift */,
 				AC141B9C1FCB4066000E8307 /* REST.swift */,
@@ -158,6 +161,7 @@
 			files = (
 				AC141B891FCB3798000E8307 /* ViewController.swift in Sources */,
 				AC141B9F1FCB475F000E8307 /* BeerTableViewCell.swift in Sources */,
+				AC141BA31FCB5D20000E8307 /* BeerViewController.swift in Sources */,
 				AC141B991FCB3953000E8307 /* BeersTableViewController.swift in Sources */,
 				AC141B871FCB3798000E8307 /* AppDelegate.swift in Sources */,
 				AC141B9D1FCB4066000E8307 /* REST.swift in Sources */,
