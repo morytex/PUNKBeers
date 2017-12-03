@@ -9,15 +9,35 @@
 import UIKit
 
 class BeersTableViewController: UITableViewController {
-
+    
+    var beers: [Beer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "detail" {
+            let vc = segue.destination as! BeerViewController
+            vc.beer = beers[tableView.indexPathForSelectedRow!.row]
+        }
+    }
+    
+    func loadBeers() {
+        REST.loadBeers { (beers: [Beer]?) in
+            if let beers = beers {
+                self.beers = beers
+                print("Carregou as cervejas")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadBeers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,26 +46,26 @@ class BeersTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return beers.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath) as! BeerTableViewCell
 
         // Configure the cell...
+        let beer = beers[indexPath.row]
+        cell.lbName.text = beer.name
+        cell.lbAlcoholContent.text = "Teor alcoólico: \(beer.alcoholContent)"
+        // TODO: Usar Kingfisher para fazer exibir imagem a partir da imageUrl
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

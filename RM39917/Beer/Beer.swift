@@ -15,7 +15,7 @@ class Beer {
     var imageUrl: String
     var alcoholContent: Double
     var bitternessScale: Double
-    var id: String?
+    var id: Int?
     
     init(name: String, tagline: String, description: String, imageUrl: String, alcoholContent: Double, bitternessScale: Double) {
         self.name = name
