@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BeersTableViewController: UITableViewController {
     
@@ -61,9 +62,12 @@ class BeersTableViewController: UITableViewController {
         // Configure the cell...
         let beer = beers[indexPath.row]
         cell.lbName.text = beer.name
+        cell.lbName.sizeToFit()
         cell.lbAlcoholContent.text = "Teor alcoólico: \(beer.alcoholContent)"
         // TODO: Usar Kingfisher para fazer exibir imagem a partir da imageUrl
-
+        let url = URL(string: beer.imageUrl)
+        cell.ivImage.kf.setImage(with: url)
+        
         return cell
     }
 
