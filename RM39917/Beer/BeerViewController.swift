@@ -17,6 +17,7 @@ class BeerViewController: UIViewController {
     @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var lbAlcoholContent: UILabel!
     @IBOutlet weak var lbBitternessScale: UILabel!
+    @IBOutlet weak var ivImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -29,6 +30,9 @@ class BeerViewController: UIViewController {
             self.lbDescription.text = beer.description
             self.lbAlcoholContent.text = "Teor Alcoólico: \(beer.alcoholContent)"
             self.lbBitternessScale.text = "Escala de Amargor: \(beer.bitternessScale)"
+            
+            let url = URL(string: beer.imageUrl)
+            self.ivImage.kf.setImage(with: url)
         }
     }
 

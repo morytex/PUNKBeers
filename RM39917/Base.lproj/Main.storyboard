@@ -14,17 +14,13 @@
         <!--Beer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="BeerViewController" customModule="PUNKBeers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-wq-smc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-wq-smc">
                                 <rect key="frame" x="8" y="80" width="359" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="2Dt-Wq-i1l"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -62,10 +58,18 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-xp-B6J">
+                                <rect key="frame" x="90" y="247.5" width="195" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="2Ia-ur-jKf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jw2-kq-iIV" secondAttribute="trailing" constant="8" id="24f-W1-4wc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nf4-xp-B6J" secondAttribute="trailing" constant="90" id="8Tt-E3-PXg"/>
+                            <constraint firstItem="nf4-xp-B6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="EmM-YW-YDr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0v-vu-mtS" secondAttribute="trailing" constant="8" id="Hu0-dN-6aI"/>
                             <constraint firstItem="Y2V-qX-J30" firstAttribute="top" secondItem="4mQ-wq-smc" secondAttribute="bottom" constant="8" id="IFh-6K-Ar2"/>
                             <constraint firstItem="4mQ-wq-smc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Idp-OF-oXX"/>
@@ -76,6 +80,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4mQ-wq-smc" secondAttribute="trailing" constant="8" id="ShS-0n-eBV"/>
                             <constraint firstItem="q0v-vu-mtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="YGj-lV-7fV"/>
                             <constraint firstItem="okr-VT-9oy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZI2-Ad-XrK"/>
+                            <constraint firstItem="nf4-xp-B6J" firstAttribute="top" secondItem="okr-VT-9oy" secondAttribute="bottom" constant="16" id="dfh-jm-mBL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="okr-VT-9oy" secondAttribute="trailing" constant="8" id="iUM-Tb-ur2"/>
                             <constraint firstItem="jw2-kq-iIV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="mgD-7h-CyS"/>
                             <constraint firstItem="okr-VT-9oy" firstAttribute="top" secondItem="q0v-vu-mtS" secondAttribute="bottom" constant="8" id="nds-aa-SLe"/>
@@ -84,6 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ivImage" destination="nf4-xp-B6J" id="dP8-QV-KDQ"/>
                         <outlet property="lbAlcoholContent" destination="q0v-vu-mtS" id="Xlv-dw-mKG"/>
                         <outlet property="lbBitternessScale" destination="okr-VT-9oy" id="sqF-A6-d9n"/>
                         <outlet property="lbDescription" destination="jw2-kq-iIV" id="4ih-Rv-XND"/>
@@ -91,12 +97,14 @@
                         <outlet property="lbTagline" destination="Y2V-qX-J30" id="wNm-Ki-qEM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1672.8" y="878.41079460269873"/>
         </scene>
         <!--Beers-->
         <scene sceneID="fvm-i5-VpS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqO-8C-UVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="H16-5Y-MlA" customClass="BeersTableViewController" customModule="PUNKBeers" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C4b-ew-txp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -110,15 +118,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-lB-hQS">
-                                            <rect key="frame" x="8" y="8" width="80" height="89.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-lB-hQS">
+                                            <rect key="frame" x="8" y="8" width="50" height="89.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="QdO-iW-ObQ"/>
+                                                <constraint firstAttribute="width" constant="50" id="QdO-iW-ObQ"/>
                                                 <constraint firstAttribute="height" constant="89.5" id="sKB-KT-AkM"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9s-Cm-N9E">
-                                            <rect key="frame" x="96" y="11" width="255" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9s-Cm-N9E">
+                                            <rect key="frame" x="66" y="11" width="285" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="RPT-Dx-f5j"/>
                                             </constraints>
@@ -127,7 +135,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVl-HJ-y1h">
-                                            <rect key="frame" x="96" y="77" width="255" height="18"/>
+                                            <rect key="frame" x="66" y="77" width="285" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="cYh-Yb-vqm"/>
                                             </constraints>
@@ -165,7 +173,6 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="mBX-no-EnM"/>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oqO-8C-UVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="677.60000000000002" y="879.31034482758628"/>
         </scene>
